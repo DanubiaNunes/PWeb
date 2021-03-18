@@ -41,8 +41,14 @@ var resultado03 = produto();
 var divisao = function () {
     var N1 = parseFloat(primeiroNumero);
     var N2 = parseFloat(segundoNumero);
+    var valor;
 
-    var valor = N1 / N2 ;
+    if (N2 == 0) {
+        valor = 'Impossivel dividir por zero =(';
+    }
+    else {
+        valor = N1 / N2;
+    }
 
     return valor;
 }
@@ -52,8 +58,14 @@ var resultado04 = divisao();
 var resto = function () {
     var N1 = parseFloat(primeiroNumero);
     var N2 = parseFloat(segundoNumero);
+    var valor;
 
-    var valor = N1 % N2 ;
+    if (N2 == 0) {
+        valor = 'Impossivel dividir por zero =(';
+    }
+    else {
+        valor = N1 % N2;
+    }
 
     return valor;
 }
