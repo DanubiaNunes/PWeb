@@ -4,54 +4,64 @@ var computador;
 var mensagem;
 var pc;
 
-nomeAluno = prompt("Digite uma das opções: pedra, papel ou tesoura");
-
-//alert(nomeAluno.toString());
+usuario = prompt("Digite uma das opções: pedra, papel ou tesoura");
 computador = Math.random();
 
-alert(computador.toString());
+alert(computador);
 
 //computador pedra - 0-0,33
 //computador papel - 0,33 - 0,66
 //computador tesoura - 0,66 - 1
 
-if (nomeAluno.length == 0) {
-    mensagem = 'a opção digitada invalida';
+if (usuario.length == 0) {
+    mensagem = 'A opção digitada invalida';
+    pc = '';
 }
-else if (nomeAluno.toString().toUpperCase() == 'PEDRA') {
+else if (usuario.toUpperCase() == 'PEDRA') {
     if (computador <= 0.33) {
         mensagem = 'Empate';
-        pc = 'pedra';
+        pc = 'Pedra';
     } else if (computador > 0.33 && computador <= 0.66) {
         mensagem = 'Papel cobre pedra';
-        pc = 'papel';
+        pc = 'Papel';
     }
     else {
         mensagem = 'Pedra quebra tesoura'; 
-        pc = 'tesoura'
+        pc = 'Tesoura';
     }
         
 }
-else if (nomeAluno.toString().toUpperCase() == 'PAPEL') {
-    if (computador <= 0.33)
+else if (usuario.toUpperCase() == 'PAPEL') {
+    if (computador <= 0.33) {
         mensagem = 'Papel cobre pedra';
-    else if (computador > 0.33 && computador <= 0.66)
+        pc = 'Pedra';
+    } else if (computador > 0.33 && computador <= 0.66) {
         mensagem = 'Empate';
-    else 
+        pc = 'Papel';
+    }
+    else {
         mensagem = 'Tesoura corta Papel';
+        pc = 'Tesoura'
+    }
 }
-else if (nomeAluno.toString().toUpperCase() == 'TESOURA') {
-    if (computador <= 0.33)
+else if (usuario.toUpperCase() == 'TESOURA') {
+    if (computador <= 0.33) {
         mensagem = 'Pedra quebra tesoura';
-    else if (computador > 0.33 && computador <= 0.66)
+        pc = 'Pedra';
+    } else if (computador > 0.33 && computador <= 0.66) {
         mensagem = 'Tesoura corta Papel';
-    else
+        pc = 'Papel';
+    }
+    else {
         mensagem = 'Empate';
+        pc = 'Tesoura';
+    }
 } else {
-    mensagem = 'a opção digitada invalida';
+    mensagem = 'A opção digitada invalida.';
+    pc = '';
 }
 
-
-
-
-alert(mensagem.toString() );
+if (pc == '')
+    alert(mensagem);
+else
+    alert("O sistema escolheu: " + pc + "\nRESULTADO: " + mensagem);
