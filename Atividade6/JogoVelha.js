@@ -17,7 +17,7 @@ if (usuario.length == 0) {
     mensagem = 'A opção digitada invalida';
     pc = '';
 }
-else if (usuario.toUpperCase() == 'PEDRA') {
+else if (usuario.toUpperCase() === 'PEDRA') {
     if (computador <= 0.33) {
         mensagem = 'Empate';
         pc = 'Pedra';
@@ -31,7 +31,7 @@ else if (usuario.toUpperCase() == 'PEDRA') {
     }
         
 }
-else if (usuario.toUpperCase() == 'PAPEL') {
+else if (usuario.toUpperCase() === 'PAPEL') {
     if (computador <= 0.33) {
         mensagem = 'Papel cobre pedra';
         pc = 'Pedra';
@@ -44,7 +44,7 @@ else if (usuario.toUpperCase() == 'PAPEL') {
         pc = 'Tesoura'
     }
 }
-else if (usuario.toUpperCase() == 'TESOURA') {
+else if (usuario.toUpperCase() === 'TESOURA') {
     if (computador <= 0.33) {
         mensagem = 'Pedra quebra tesoura';
         pc = 'Pedra';
