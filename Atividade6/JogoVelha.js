@@ -7,7 +7,7 @@ var pc;
 usuario = prompt("Digite uma das opções: pedra, papel ou tesoura");
 computador = Math.random();
 
-alert(computador);
+//alert(computador);
 
 //computador pedra - 0-0,33
 //computador papel - 0,33 - 0,66
