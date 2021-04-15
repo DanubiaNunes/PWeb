@@ -53,7 +53,7 @@ function Poupanca() {
         juros = value;
     };
 
-    this.getData = function () {
+    this.getDataVencimento = function () {
         return dataVencimento;
     };
     this.setDataVencimento = function (value) {
@@ -80,8 +80,8 @@ nCorrente.setBanco('Banco Fatec');
 nCorrente.setNumeroConta('001-02');
 nCorrente.setSaldo('12000');
 
-console.log(nPoupanca.getNome() + " " + nPoupanca.getBanco() + " " + nPoupanca.getNumeroConta() + " " + nPoupanca.getSaldo() + " " + nPoupanca.getJuros() + " " + nPoupanca.getData());
-alert(nPoupanca.getNome() + " " + nPoupanca.getBanco() + " " + nPoupanca.getNumeroConta() + " " + nPoupanca.getSaldo() + " " + nPoupanca.getJuros() + " " + nPoupanca.getData());
+console.log(nPoupanca.getNome() + " " + nPoupanca.getBanco() + " " + nPoupanca.getNumeroConta() + " " + nPoupanca.getSaldo() + " " + nPoupanca.getJuros() + " " + nPoupanca.getDataVencimento());
+alert(nPoupanca.getNome() + " " + nPoupanca.getBanco() + " " + nPoupanca.getNumeroConta() + " " + nPoupanca.getSaldo() + " " + nPoupanca.getJuros() + " " + nPoupanca.getDataVencimento());
 
 console.log(nCorrente.getNome() + " " + nCorrente.getBanco() + " " + nCorrente.getNumeroConta() + " " + nCorrente.getSaldo() + " " + nCorrente.getSaldoEspecial());
 alert(nCorrente.getNome() + " " + nCorrente.getBanco() + " " + nCorrente.getNumeroConta() + " " + nCorrente.getSaldo() + " " + nCorrente.getSaldoEspecial());
